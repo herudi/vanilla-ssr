@@ -14,6 +14,7 @@ const api = (url) => fetch(base_url + "/api" + url).then(r => r.json());
 
 router.use((state, next) => {
   if (!IS_SERVER) return (IS_SERVER = !IS_SERVER);
+  window.IS_READY = true;
   state.api = api;
   next();
 });
@@ -22,6 +23,9 @@ router.get("/", { controller: "contact.js" });
 router.get("/about", { controller: "about.js" });
 router.get("/help", { controller: "help.js" });
 router.get("/:username", { controller: "user.js" });
+
+router.on("van:start", () => window.IS_READY && NProgress.start())
+router.on("van:end", () => NProgress.done())
 
 router.listen(IS_SERVER);
 
