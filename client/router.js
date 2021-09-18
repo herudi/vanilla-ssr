@@ -3,7 +3,7 @@ let IS_SERVER = typeof require !== 'undefined';
 // development change false
 const isProduction = true;
 
-const base_url = isProduction ? "https://vanilla-ssr.vercel.app" : "http://localhost:3000";
+const base_url = isProduction ? "https://vanilla-ssr-gilt.vercel.app/" : "http://localhost:3000";
 
 const router = (IS_SERVER ? require("van-router") : vanRouter)({
   baseController: "/page/",
