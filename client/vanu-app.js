@@ -1,6 +1,6 @@
 let IS_SERVER = typeof require !== 'undefined';
 
-const app = (IS_SERVER ? require("./vanu") : vanu)({
+const app = (IS_SERVER ? require("vanu") : vanu)({
   baseController: "/page/",
   target: "#ssr-app"
 });
