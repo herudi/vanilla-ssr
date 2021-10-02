@@ -1,5 +1,5 @@
-async function user({ html, params, api, initData, render }) {
-  const user = initData ? initData : (await api("/contact/" + params.username));
+async function user({ html, params, api, initServerData, render }) {
+  const user = initServerData ? initServerData : (await api("/contact/" + params.username));
   if (!user.username) return render(() => html`<h1>PAGE NOT FOUND</h1>`);
   document.title = user.username;
   render(() => html`

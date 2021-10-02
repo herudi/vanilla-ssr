@@ -1,13 +1,9 @@
-async function contact({ html, api, initData, render, useValue }) {
+async function contact({ html, api, initServerData, render, useValue }) {
   document.title = "welcome contact";
   const dataUser = useValue([]);
   const searchUser = useValue();
   const searchText = useValue("");
-  if (initData) {
-    dataUser.value = initData;
-  } else {
-    dataUser.value = await api("/contact");
-  }
+  dataUser.value = initServerData ? initServerData : (await api("/contact"));
   const onSearch = (e) => {
     e.preventDefault();
     const text = e.target.value;
