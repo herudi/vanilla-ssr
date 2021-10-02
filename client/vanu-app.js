@@ -17,8 +17,8 @@ app.get("/:username", { controller: "user.js" });
 
 if (!IS_SERVER) {
   //client only
-  app.on("van:start", () => NProgress.start());
-  app.on("van:end", () => NProgress.done());
+  app.on("vanu:start", () => NProgress.start());
+  app.on("vanu:end", () => NProgress.done());
   app.listen();
 }
 
