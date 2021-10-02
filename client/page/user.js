@@ -1,8 +1,8 @@
-async function user({ html, params, api }) {
-  const user = await api("/contact/" + params.username);
-  if (!user.username) return `<h1>PAGE NOT FOUND</h1>` 
+async function user({ html, params, api, initData, render }) {
+  const user = initData ? initData : (await api("/contact/" + params.username));
+  if (!user.username) return render(() => html`<h1>PAGE NOT FOUND</h1>`);
   document.title = user.username;
-  return html`
+  render(() => html`
     <div class="card">
       <div class="card-header">
         ${user.username}
@@ -19,10 +19,10 @@ async function user({ html, params, api }) {
           <div>Gender : ${user.gender}</div>
           <div>Address : ${user.location.street}, ${user.location.city}, ${user.location.state}</div>
         </p>
-        <a href="/" class="btn btn-primary" van-link>Go Contact</a>
+        <a href="/" class="btn btn-primary" u-link>Go Contact</a>
       </div>
     </div>
-  `
+  `)
 }
 
 module.exports = user;

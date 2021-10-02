@@ -1,10 +1,10 @@
-function about({ html }) {
+function about({ html, render }) {
   document.title = "welcome About";
-  return html`
+  render(() => html`
     <h1>About</h1>
     <hr />
     <span>Example About Page</span>
-  `
+  `)
 }
 
 module.exports = about;

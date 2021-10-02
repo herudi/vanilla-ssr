@@ -7,8 +7,6 @@ cd vanilla-ssr
 npm install
 ```
 
-> For Development change variable `isProduction` to false in `/page/router.js`
-
 ## Run 
 ```bash
 node server.js
