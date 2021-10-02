@@ -17,16 +17,11 @@ function findAllContact() {
 function findByUsernameContact(username) {
   return db.find(e => e.username === username) || {};
 }
-function vanuSSR(params) {
-  
-}
-
 module.exports = express()
   .use(express.static(__baseClient))
   .use((req, res, next) => {
     req.vanuRender = (initData) => {
-      const str = vanuApp.listen(req, res, initData);
-      if (str === "404") res.send("<h1>404 not found</h1>");
+      vanuApp.listen(req, res, initData);
     };
     next();
   })
