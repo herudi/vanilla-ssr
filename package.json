@@ -1,11 +1,11 @@
 {
-  "name": "alpine-ssr",
+  "name": "vanilla-ssr",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "linkedom": "^0.11.2",
-    "vanu": "^0.0.7"
+    "vanu": "^0.0.8"
   }
 }
