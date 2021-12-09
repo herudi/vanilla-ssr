@@ -467,10 +467,10 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-vanu@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/vanu/-/vanu-0.0.8.tgz#8e472779b727a661cf2a8cf89de5f6d0af4328e0"
-  integrity sha512-Cd3otg68H8OO94CcxtBWJUgEAVnLiuvEPXqyRNOnkjYnZq7A9GKzpFEOzx1O1/XZzYJB/FUnXRLWKN7uqzBngA==
+vanu@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/vanu/-/vanu-0.1.5.tgz#547cc65864c819c51193a2cf4a5edaae1fbb2ba0"
+  integrity sha512-UsqPG255R4khQSzUrM/uZSZAX1/J4PLR1n0Uiju6SLujfpRQghmwhm/4omkim9ntafb1B990CLSDsP2AqUln8A==
 
 vary@~1.1.2:
   version "1.1.2"
