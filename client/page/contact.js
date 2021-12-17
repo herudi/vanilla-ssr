@@ -1,5 +1,13 @@
-async function contact({ html, api, initServerData, render, useValue }) {
-  document.title = "welcome contact";
+async function contact({ 
+  html, 
+  api, 
+  initServerData, 
+  render, 
+  useValue, 
+  seo,
+  toAction
+}) {
+  seo.title = "welcome contact";
   const dataUser = useValue([]);
   const searchUser = useValue();
   const searchText = useValue("");
@@ -17,7 +25,7 @@ async function contact({ html, api, initServerData, render, useValue }) {
   render(() => html`
     <h1>Contacts</h1>
     <hr />
-    <input oninput="${onSearch}" value="${searchText.value}" placeholder="Search by username"/>
+    <input oninput="${toAction(onSearch)}" value="${searchText.value}" placeholder="Search by username"/>
     <div class="row">
       ${(searchUser.value || dataUser.value).map(user => html`
           <div class="col-md-3" style="padding: 10px;">

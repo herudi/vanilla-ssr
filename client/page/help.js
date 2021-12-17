@@ -1,5 +1,5 @@
-function help({ html, render }) {
-  document.title = "welcome Help";
+function help({ html, render, seo }) {
+  seo.title = "welcome Help";
   render(() => html`
     <h1>Help</h1>
     <hr />

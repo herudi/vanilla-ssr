@@ -1,7 +1,7 @@
-async function user({ html, params, api, initServerData, render }) {
+async function user({ html, params, api, initServerData, render, seo }) {
   const user = initServerData ? initServerData : (await api("/contact/" + params.username));
   if (!user.username) return render(() => html`<h1>PAGE NOT FOUND</h1>`);
-  document.title = user.username;
+  seo.title = user.username;
   render(() => html`
     <div class="card">
       <div class="card-header">
